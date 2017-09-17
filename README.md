@@ -1,15 +1,14 @@
 # Vue Boilerplate
 
-> Vue Bootstrap 4 (beta) boilerplate with basic home-about-contact pages vue components handled by vue router, useful for pure showcase/prototype sites only.
+> Vue Bootstrap 4 (beta) boilerplate with basic home-about-contact pages vue components handled by vue router and with SSR feature.
 
 ## Quick start
 
 ```shell
-yarn
-yarn dev
+npm i
+npm run dev
 ```
 
-Just as easy !
 Web site should be accessible from localhost:3000.
 Default port is configurable by `.env` file settings (just copy `.env.example`).
 
@@ -17,11 +16,14 @@ Default port is configurable by `.env` file settings (just copy `.env.example`).
 
 ### Commands
 
-* `yarn dev`
+* `npm run dev`
 Start Webpack assets compilation and express server with hot reloading support.
 
-* `yarn build`
+* `npm run build`
 Compile all JS application into redistributable static files into `dist` folder.
+
+* `npm start`
+For production, start express server with SSR feature.
 
 ## License
 
