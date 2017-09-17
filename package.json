@@ -1,7 +1,7 @@
 {
   "name": "vue-boilerplate",
   "version": "1.0.0",
-  "description": "Lite Vue Frontend boilerplate based on Bootstrap for pure showcase/prototype sites, with Webpack for assets management.",
+  "description": "Lite Vue Frontend boilerplate with SSR enabled.",
   "scripts": {
     "dev": "node server",
     "start": "cross-env NODE_ENV=production node server",
@@ -59,7 +59,6 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "vue": "^2.4.4",
-    "vue-meta": "^1.2.0",
     "vue-router": "^2.7.0",
     "vue-server-renderer": "^2.4.4",
     "vue-template-compiler": "^2.4.4"

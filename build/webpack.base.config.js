@@ -11,9 +11,9 @@ const production = process.env.NODE_ENV === 'production'
 
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: production ? 'js/[name].[chunkhash].js' : 'js/[name].js',
-    publicPath: '/'
+    publicPath: '/dist/'
   },
   module: {
     rules: [
@@ -137,22 +137,6 @@ if (production) {
       compress: {
         warnings: false
       }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: function (module, count) {
-        return (
-          module.resource &&
-          /\.js$/.test(module.resource) &&
-          module.resource.indexOf(
-            path.join(__dirname, './node_modules')
-          ) === 0
-        )
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      chunks: ['vendor']
     })
   ]
 } else {

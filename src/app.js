@@ -1,12 +1,11 @@
-import './sass/app.scss'
-import 'bootstrap'
-
 import Vue from 'vue'
 
 import App from './App.vue'
-import router from './router'
+import { createRouter } from './router'
 
-module.exports = function createApp () {
+export function createApp () {
+  const router = createRouter()
+
   const app = new Vue({
     router,
     render: h => h(App)
