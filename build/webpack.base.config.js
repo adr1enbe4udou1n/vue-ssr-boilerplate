@@ -1,18 +1,16 @@
-require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 
-const webpackDevServerPort = parseInt(process.env.WEBPACKDEVSERVER_PORT || '8080', 10)
 const production = process.env.NODE_ENV === 'production'
 
 module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: production ? 'js/[name].[chunkhash].js' : 'js/[name].js',
+    filename: '[name].[chunkhash].js',
     publicPath: '/dist/'
   },
   module: {
@@ -110,17 +108,10 @@ module.exports = {
       allChunks: true,
       disable: !production
     }),
-    new FriendlyErrorsWebpackPlugin(),
+    new FriendlyErrorsPlugin(),
     new WebpackNotifierPlugin()
   ],
-  devtool: production ? 'source-map' : 'cheap-module-eval-source-map',
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true,
-    compress: true,
-    quiet: true,
-    port: webpackDevServerPort
-  }
+  devtool: production ? 'source-map' : 'cheap-module-eval-source-map'
 }
 
 let plugins = []
@@ -137,11 +128,8 @@ if (production) {
       compress: {
         warnings: false
       }
-    })
-  ]
-} else {
-  plugins = [
-    new FriendlyErrorsWebpackPlugin()
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ]
 }
 

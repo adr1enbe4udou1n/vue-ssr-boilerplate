@@ -11,16 +11,16 @@
     "fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
     "fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec",
-    "js/main.1d695a3a098045fb1b04.js",
-    "js/manifest.616d70a4727d8ddf8e75.js",
-    "css/main.fb1600c217660e0afc201c97065f4df4.css",
-    "js/main.1d695a3a098045fb1b04.js.map",
-    "css/main.fb1600c217660e0afc201c97065f4df4.css.map",
-    "js/manifest.616d70a4727d8ddf8e75.js.map"
+    "app.8d64ba54facf7a26eda7.js",
+    "manifest.96ef853573bc0c1a89a4.js",
+    "css/app.fb1600c217660e0afc201c97065f4df4.css",
+    "app.8d64ba54facf7a26eda7.js.map",
+    "css/app.fb1600c217660e0afc201c97065f4df4.css.map",
+    "manifest.96ef853573bc0c1a89a4.js.map"
   ],
   "initial": [
-    "js/manifest.616d70a4727d8ddf8e75.js",
-    "js/main.1d695a3a098045fb1b04.js"
+    "manifest.96ef853573bc0c1a89a4.js",
+    "app.8d64ba54facf7a26eda7.js"
   ],
   "async": [],
   "modules": {
@@ -84,91 +84,7 @@
       13,
       14
     ],
-    "d064fe6e": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "1f5683bc": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "7bc985cb": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "f0ba22b8": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "9f242836": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "2bd296d3": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "5ef5aab4": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "1c86bccf": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "1f822ac5": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "74a592d6": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "ae537466": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "0b8f421e": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "37edecae": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "624e4a40": [
-      10,
-      12,
-      13,
-      14
-    ],
-    "4c27cc06": [
+    "c0e88afc": [
       10,
       12,
       13,
