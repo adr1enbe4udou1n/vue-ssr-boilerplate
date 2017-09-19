@@ -11,16 +11,16 @@
     "fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
     "fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec",
-    "app.8d64ba54facf7a26eda7.js",
-    "manifest.96ef853573bc0c1a89a4.js",
+    "app.40ce85b201a2be47ab54.js",
+    "manifest.9223b33e62537650e004.js",
     "css/app.fb1600c217660e0afc201c97065f4df4.css",
-    "app.8d64ba54facf7a26eda7.js.map",
+    "app.40ce85b201a2be47ab54.js.map",
     "css/app.fb1600c217660e0afc201c97065f4df4.css.map",
-    "manifest.96ef853573bc0c1a89a4.js.map"
+    "manifest.9223b33e62537650e004.js.map"
   ],
   "initial": [
-    "manifest.96ef853573bc0c1a89a4.js",
-    "app.8d64ba54facf7a26eda7.js"
+    "manifest.9223b33e62537650e004.js",
+    "app.40ce85b201a2be47ab54.js"
   ],
   "async": [],
   "modules": {
@@ -85,6 +85,12 @@
       14
     ],
     "c0e88afc": [
+      10,
+      12,
+      13,
+      14
+    ],
+    "3ba912c6": [
       10,
       12,
       13,

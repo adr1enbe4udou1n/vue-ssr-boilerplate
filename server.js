@@ -8,7 +8,6 @@ const resolve = file => path.resolve(__dirname, file)
 const { createBundleRenderer } = require('vue-server-renderer')
 
 const production = process.env.NODE_ENV === 'production'
-const template = fs.readFileSync('./index.html', 'utf-8')
 
 const app = express()
 const serve = (path, cache) => express.static(resolve(path))
@@ -21,14 +20,12 @@ if (production) {
   const clientManifest = require('./dist/vue-ssr-client-manifest.json')
   renderer = createBundleRenderer(serverBundle, {
     runInNewContext: false,
-    template,
     clientManifest
   })
 } else {
   readyPromise = require('./build/setup-dev-server')(app, (bundle, options) => {
     renderer = createBundleRenderer(bundle, Object.assign(options, {
-      runInNewContext: false,
-      template
+      runInNewContext: false
     }))
   })
 }
@@ -37,7 +34,6 @@ app.use('/dist', serve('./dist', true))
 
 function render (req, res) {
   const context = {
-    title: 'Vue SSR Boilerplate',
     url: req.url
   }
 
@@ -54,7 +50,30 @@ function render (req, res) {
       }
       return
     }
-    res.end(html)
+
+    const {
+      title, htmlAttrs, bodyAttrs, link, meta
+    } = context.meta.inject()
+
+    return res.send(`
+<!DOCTYPE html>
+<html data-vue-meta-server-rendered ${htmlAttrs.text()}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    ${title.text()}
+    ${meta.text()}
+    ${link.text()}
+    ${context.renderResourceHints()}
+    ${context.renderStyles()}
+  </head>
+  <body ${bodyAttrs.text()}>
+    ${html}
+    ${context.renderState()}
+    ${context.renderScripts()}
+  </body>
+</html>
+    `)
   })
 }
 

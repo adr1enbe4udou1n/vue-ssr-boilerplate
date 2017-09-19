@@ -46,6 +46,10 @@
 <script>
   export default {
     name: 'app',
+    metaInfo: {
+      title: 'Home',
+      titleTemplate: '%s | Vue SSR Boilerplate'
+    },
     data: () => {
       return {
         message: null
