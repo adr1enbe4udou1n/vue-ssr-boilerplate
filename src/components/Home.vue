@@ -16,6 +16,22 @@
 
 <script>
   export default {
-    name: 'home'
+    name: 'home',
+    metaInfo: {
+      title: 'Home',
+      meta: [
+        { name: 'description', content: 'Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.' }
+      ]
+    },
+    mounted () {
+      $('button.sweet').click(() => {
+        window.swal({
+          title: 'Yo!',
+          text: 'Yeaaah!',
+          type: 'success',
+          confirmButtonText: 'Cool'
+        })
+      })
+    }
   }
 </script>

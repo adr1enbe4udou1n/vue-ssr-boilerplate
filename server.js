@@ -59,10 +59,8 @@ function render (req, res) {
 <!DOCTYPE html>
 <html data-vue-meta-server-rendered ${htmlAttrs.text()}>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    ${title.text()}
     ${meta.text()}
+    ${title.text()}
     ${link.text()}
     ${context.renderResourceHints()}
     ${context.renderStyles()}

@@ -24,7 +24,10 @@
   export default {
     name: 'contact',
     metaInfo: {
-      title: 'Contact'
+      title: 'Contact',
+      meta: [
+        { name: 'description', content: 'Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.' }
+      ]
     }
   }
 </script>

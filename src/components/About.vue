@@ -32,7 +32,10 @@
   export default {
     name: 'about',
     metaInfo: {
-      title: 'About'
+      title: 'About',
+      meta: [
+        { name: 'description', content: 'Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.' }
+      ]
     }
   }
 </script>
