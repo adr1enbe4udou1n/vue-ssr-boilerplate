@@ -15,8 +15,6 @@
 </template>
 
 <script>
-  import sweetalert2 from 'sweetalert2'
-
   export default {
     name: 'home',
     metaInfo: {
@@ -27,7 +25,7 @@
     },
     mounted () {
       $('button.sweet').click(() => {
-        sweetalert2({
+        window.swal({
           title: 'Yo!',
           text: 'Yeaaah!',
           type: 'success',

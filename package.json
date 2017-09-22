@@ -23,7 +23,7 @@
     "babel-preset-env": "^1.6.0",
     "bootstrap": "^4.0.0-beta",
     "css-loader": "^0.28.7",
-    "eslint": "^4.7.1",
+    "eslint": "^4.7.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^3.2.2",
@@ -46,7 +46,7 @@
     "sass-loader": "^6.0.6",
     "slick-carousel": "^1.7.1",
     "style-loader": "^0.18.2",
-    "sweetalert2": "^6.9.0",
+    "sweetalert2": "^6.9.1",
     "uglify-js": "^3.1.1",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
@@ -64,7 +64,8 @@
     "vue": "^2.4.4",
     "vue-meta": "^1.2.0",
     "vue-router": "^2.7.0",
-    "vue-server-renderer": "^2.4.4"
+    "vue-server-renderer": "^2.4.4",
+    "vuex": "^2.4.0"
   },
   "browserslist": [
     "> 1%",
