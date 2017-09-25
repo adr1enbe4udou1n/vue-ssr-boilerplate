@@ -5,8 +5,8 @@
 ## Quick start
 
 ```shell
-npm i
-npm run dev
+yarn
+yarn dev
 ```
 
 Web site should be accessible from localhost:3000.
@@ -16,13 +16,13 @@ Default port is configurable by `.env` file settings (just copy `.env.example`).
 
 ### Commands
 
-* `npm run dev`
+* `yarn dev`
 Start Webpack assets compilation and express server with hot reloading support.
 
-* `npm run build`
+* `yarn build`
 Compile all JS application into redistributable static files into `dist` folder.
 
-* `npm start`
+* `yarn start`
 For production, start express server with SSR feature.
 
 ## License
