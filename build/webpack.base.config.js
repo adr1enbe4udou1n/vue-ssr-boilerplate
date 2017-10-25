@@ -30,6 +30,7 @@ module.exports = {
             }, {
               loader: 'postcss-loader',
               options: {
+                ident: 'postcss',
                 sourceMap: true,
                 plugins: [
                   require('autoprefixer')
@@ -111,6 +112,12 @@ module.exports = {
     new FriendlyErrorsPlugin(),
     new WebpackNotifierPlugin()
   ],
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   devtool: production ? 'source-map' : 'cheap-module-eval-source-map'
 }
 

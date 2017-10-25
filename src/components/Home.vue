@@ -10,7 +10,7 @@
     <h4>Bootstrap</h4>
     <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
 
-    <button class="btn btn-default sweet">Sweet !</button>
+    <b-button class="sweet">Sweet !</b-button>
   </div>
 </template>
 

@@ -1,5 +1,4 @@
 import './sass/app.scss'
-import 'bootstrap'
 import 'slick-carousel'
 import sweetalert2 from 'sweetalert2'
 
