@@ -11,7 +11,7 @@
       </b-container>
     </div>
 
-    <b-container>
+    <div class="container">
       <div class="slider" hidden>
         <div><h3>1</h3></div>
         <div><h3>2</h3></div>
@@ -25,7 +25,7 @@
         {{ message.body }}
       </b-alert>
       <router-view></router-view>
-    </b-container>
+    </div>
 
     <div class="footer">
       <b-container>

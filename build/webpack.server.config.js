@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const nodeExternals = require('webpack-node-externals')
 const baseConfig = require('./webpack.base.config.js')
@@ -14,6 +15,10 @@ module.exports = merge(baseConfig, {
     whitelist: /\.css$/
   }),
   plugins: [
+    new webpack.DefinePlugin({
+      'process.browser': false,
+      'process.server': true
+    }),
     new VueSSRServerPlugin()
   ]
 })

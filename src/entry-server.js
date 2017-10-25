@@ -2,7 +2,7 @@ import { createApp } from './app'
 
 export default context => {
   return new Promise((resolve, reject) => {
-    const { app, router } = createApp()
+    const { app, router, store } = createApp()
 
     router.push(context.url)
     context.meta = app.$meta()
@@ -14,6 +14,7 @@ export default context => {
         return reject({ code: 404 })
       }
 
+      context.state = store.state
       resolve(app)
     }, reject)
   })

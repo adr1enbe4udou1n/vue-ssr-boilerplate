@@ -1,3 +1,4 @@
+const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.config.js')
@@ -8,9 +9,25 @@ module.exports = merge(baseConfig, {
     app: './src/entry-client.js'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.browser': true,
+      'process.server': false
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module, count) {
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../node_modules')
+          ) === 0
+        )
+      }
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
-      minChunks: Infinity
+      chunks: ['vendor']
     }),
     new VueSSRClientPlugin()
   ]
