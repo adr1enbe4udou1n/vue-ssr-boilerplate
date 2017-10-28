@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const express = require('express')
-const fs = require('fs')
+const LRU = require('lru-cache')
 const path = require('path')
 const resolve = file => path.resolve(__dirname, file)
 
@@ -25,6 +25,10 @@ if (production) {
 } else {
   readyPromise = require('./build/setup-dev-server')(app, (bundle, options) => {
     renderer = createBundleRenderer(bundle, Object.assign(options, {
+      cache: LRU({
+        max: 1000,
+        maxAge: 1000 * 60 * 15
+      }),
       runInNewContext: false
     }))
   })
@@ -32,7 +36,17 @@ if (production) {
 
 app.use('/dist', serve('./dist', true))
 
+const microCache = LRU({
+  max: 100,
+  maxAge: 1000
+})
+
 function render (req, res) {
+  const hit = microCache.get(req.url)
+  if (hit) {
+    return res.end(hit)
+  }
+
   const context = {
     url: req.url
   }
@@ -55,7 +69,7 @@ function render (req, res) {
       title, htmlAttrs, bodyAttrs, link, meta
     } = context.meta.inject()
 
-    return res.send(`
+    html = `
 <!DOCTYPE html>
 <html data-vue-meta-server-rendered ${htmlAttrs.text()}>
   <head>
@@ -71,7 +85,10 @@ function render (req, res) {
     ${context.renderScripts()}
   </body>
 </html>
-    `)
+    `
+
+    microCache.set(req.url, html)
+    return res.send(html)
   })
 }
 
