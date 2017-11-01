@@ -11,18 +11,18 @@
     "fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a",
     "fonts/slick.ttf?d41f55a78e6f49a5512878df1737e58a",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
-    "vendor.7b0ef33fd47af00a0c3a.js",
+    "vendor.85a4acef3151d6134e11.js",
     "app.6dac07d0784ada5b4867.js",
-    "manifest.e6eb860e7f8414fb844b.js",
-    "css/app.84352531fa5bc2942bc4f22f0eae059a.css",
-    "vendor.7b0ef33fd47af00a0c3a.js.map",
+    "manifest.06f8b328030ddea96061.js",
+    "css/app.430e2b0bdb6ca424e7c622a8c3ed035d.css",
+    "vendor.85a4acef3151d6134e11.js.map",
     "app.6dac07d0784ada5b4867.js.map",
-    "css/app.84352531fa5bc2942bc4f22f0eae059a.css.map",
-    "manifest.e6eb860e7f8414fb844b.js.map"
+    "css/app.430e2b0bdb6ca424e7c622a8c3ed035d.css.map",
+    "manifest.06f8b328030ddea96061.js.map"
   ],
   "initial": [
-    "manifest.e6eb860e7f8414fb844b.js",
-    "vendor.7b0ef33fd47af00a0c3a.js",
+    "manifest.06f8b328030ddea96061.js",
+    "vendor.85a4acef3151d6134e11.js",
     "app.6dac07d0784ada5b4867.js"
   ],
   "async": [],
