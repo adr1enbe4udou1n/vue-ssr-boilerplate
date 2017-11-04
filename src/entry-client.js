@@ -1,6 +1,5 @@
 import './sass/app.scss'
-import 'slick-carousel'
-import sweetalert2 from 'sweetalert2'
+import './load-client-scripts'
 
 import { createApp } from './app'
 
@@ -13,5 +12,3 @@ if (window.__INITIAL_STATE__) {
 router.onReady(() => {
   app.$mount('#app')
 })
-
-window.swal = sweetalert2
