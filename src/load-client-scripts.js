@@ -1,4 +1,4 @@
 import 'slick-carousel'
-import sweetalert2 from 'sweetalert2'
+import swal from 'sweetalert2'
 
-window.swal = sweetalert2
+window.swal = swal
