@@ -11,18 +11,18 @@
     "fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a",
     "fonts/slick.ttf?d41f55a78e6f49a5512878df1737e58a",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
-    "vendor.c7b60de5163f3888f212.js",
+    "vendor.963e9691dc7fd777c6a7.js",
     "app.1b16bef6c8760536d18b.js",
-    "manifest.bb7ee57bbcd08f75f191.js",
+    "manifest.337b2249fd92377e2cd4.js",
     "css/app.1f9a148d613586ce736e1d2b99057def.css",
-    "vendor.c7b60de5163f3888f212.js.map",
+    "vendor.963e9691dc7fd777c6a7.js.map",
     "app.1b16bef6c8760536d18b.js.map",
     "css/app.1f9a148d613586ce736e1d2b99057def.css.map",
-    "manifest.bb7ee57bbcd08f75f191.js.map"
+    "manifest.337b2249fd92377e2cd4.js.map"
   ],
   "initial": [
-    "manifest.bb7ee57bbcd08f75f191.js",
-    "vendor.c7b60de5163f3888f212.js",
+    "manifest.337b2249fd92377e2cd4.js",
+    "vendor.963e9691dc7fd777c6a7.js",
     "app.1b16bef6c8760536d18b.js"
   ],
   "async": [],
@@ -83,7 +83,7 @@
       10,
       14
     ],
-    "b8e8cfe6": [
+    "076a7ffc": [
       10,
       14
     ],

@@ -39,7 +39,6 @@
     "jquery": "^3.2.1",
     "memory-fs": "^0.4.1",
     "node-sass": "^4.6.1",
-    "popper.js": "^1.12.8",
     "postcss-loader": "^2.0.8",
     "resolve-url-loader": "^2.2.0",
     "rimraf": "^2.6.2",
