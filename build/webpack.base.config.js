@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
@@ -124,11 +125,9 @@ if (production) {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
+    new UglifyJsPlugin({
+      parallel: true,
+      sourceMap: true
     }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
