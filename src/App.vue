@@ -36,28 +36,28 @@
 </template>
 
 <script>
-  export default {
-    name: 'app',
-    metaInfo: {
-      titleTemplate: '%s | Vue SSR Boilerplate',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
-      ]
-    },
-    data: () => {
-      return {
-        message: null
-      }
-    },
-    mounted () {
-      $('.slider').not('.slick-initialized').removeAttr('hidden').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      })
+export default {
+  name: 'App',
+  metaInfo: {
+    titleTemplate: '%s | Vue SSR Boilerplate',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+    ]
+  },
+  data: () => {
+    return {
+      message: null
     }
+  },
+  mounted () {
+    $('.slider').not('.slick-initialized').removeAttr('hidden').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1
+    })
   }
+}
 </script>

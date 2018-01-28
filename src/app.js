@@ -1,9 +1,10 @@
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
 
 import App from './App.vue'
 import { createRouter } from './router'
 import { createStore } from './store'
+
+import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue'
 
 Vue.use(BootstrapVue)
 
@@ -14,7 +15,7 @@ export function createApp () {
   const app = new Vue({
     router,
     store,
-    render: h => h(App)
+    render: (h) => h(App)
   })
 
   return { app, router, store }

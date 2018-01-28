@@ -1,281 +1,107 @@
 {
   "publicPath": "/dist/",
   "all": [
-    "fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec",
-    "fonts/slick.eot?ced611daf7709cc778da928fec876475",
-    "fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e",
-    "fonts/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad",
-    "fonts/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9",
-    "fonts/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde",
-    "images/ajax-loader.gif?68b0c4fcb84d239f261c1a5e65818142",
-    "fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a",
     "fonts/slick.ttf?d41f55a78e6f49a5512878df1737e58a",
+    "fonts/slick.eot?ced611daf7709cc778da928fec876475",
+    "fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a",
+    "fonts/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde",
+    "fonts/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9",
+    "fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
-    "vendor.e28d8fdbd25ce89e6769.js",
-    "app.de5f301e50e223a5a016.js",
-    "manifest.ab3fdbbd9cb89f833b0f.js",
-    "css/app.89d48c22ca6a68ab2232f746b71a3323.css",
-    "vendor.e28d8fdbd25ce89e6769.js.map",
-    "app.de5f301e50e223a5a016.js.map",
-    "css/app.89d48c22ca6a68ab2232f746b71a3323.css.map",
-    "manifest.ab3fdbbd9cb89f833b0f.js.map"
+    "fonts/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad",
+    "fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e",
+    "images/ajax-loader.gif?68b0c4fcb84d239f261c1a5e65818142",
+    "vendor.9f2d57f412a765b1161f.js",
+    "app.6ef4aa796546b11ad985.js",
+    "manifest.a666d1057917ded35f33.js",
+    "css/app.3d102e962fcf6478056f1833705bcd8d.css",
+    "vendor.9f2d57f412a765b1161f.js.map",
+    "app.6ef4aa796546b11ad985.js.map",
+    "css/app.3d102e962fcf6478056f1833705bcd8d.css.map",
+    "manifest.a666d1057917ded35f33.js.map"
   ],
   "initial": [
-    "manifest.ab3fdbbd9cb89f833b0f.js",
-    "vendor.e28d8fdbd25ce89e6769.js",
-    "app.de5f301e50e223a5a016.js"
+    "manifest.a666d1057917ded35f33.js",
+    "vendor.9f2d57f412a765b1161f.js",
+    "app.6ef4aa796546b11ad985.js"
   ],
   "async": [],
   "modules": {
-    "1b61897f": [
+    "56913962": [
       10,
       14
     ],
-    "cee6005a": [
+    "2bd296d3": [
       10,
       14
     ],
-    "1889b33e": [
+    "4de33f3c": [
       10,
       14
     ],
-    "cc9f87ba": [
+    "2326a8a7": [
       10,
       14
     ],
-    "06b359da": [
+    "a6ba66b0": [
       10,
       14
     ],
-    "b635c472": [
+    "3384ec83": [
       10,
       14
     ],
-    "39cbab88": [
-      10,
-      14
-    ],
-    "391acb25": [
-      10,
-      14
-    ],
-    "3f36c2c7": [
-      10,
-      14
-    ],
-    "0872435d": [
-      10,
-      14
-    ],
-    "e88e7a30": [
-      10,
-      14
-    ],
-    "619cbefc": [
-      10,
-      14
-    ],
-    "2f2cab01": [
-      10,
-      14
-    ],
-    "0970ad7c": [
-      10,
-      14
-    ],
-    "b565cc28": [
-      10,
-      14
-    ],
-    "5a3aa747": [
-      10,
-      14
-    ],
-    "00313367": [
-      10,
-      14
-    ],
-    "6b7c46e1": [
-      10,
-      14
-    ],
-    "5c231552": [
+    "7bc985cb": [
       11,
       13,
       15,
       16
     ],
-    "12ba8328": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "cbfe4e50": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "091b1036": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "2a1f568b": [
+    "532bf978": [
       10,
       14
     ],
-    "7b5bb59f": [
+    "0cff9022": [
       10,
       14
     ],
-    "22d09616": [
+    "8ba8f216": [
       10,
       14
     ],
-    "73505b1a": [
+    "e83cb176": [
       10,
       14
     ],
-    "8ae25d4a": [
+    "6866069e": [
       10,
       14
     ],
-    "dd6e5b1e": [
+    "383b4f98": [
       10,
       14
     ],
-    "195b520b": [
+    "3ba912c6": [
+      10,
+      14
+    ],
+    "3efdb243": [
       11,
       13,
       15,
       16
     ],
-    "0e1c38e9": [
+    "7ed11a7e": [
       11,
       13,
       15,
       16
     ],
-    "4f990ab5": [
+    "a566f85a": [
       11,
       13,
       15,
       16
-    ],
-    "bdf6de84": [
-      10,
-      14
-    ],
-    "d3612bb4": [
-      10,
-      14
-    ],
-    "533461ec": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "3493e7b5": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "7272bc81": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "e1748aa4": [
-      10,
-      14
-    ],
-    "0ee47bf9": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "77a79f4c": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "47e29126": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "0fe793ae": [
-      10,
-      14
-    ],
-    "7c97fe01": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "1263d3de": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "5098a446": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "64b161ce": [
-      10,
-      14
-    ],
-    "354991a2": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "5fe23754": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "38cecfc0": [
-      11,
-      13,
-      15,
-      16
-    ],
-    "7fe0bece": [
-      10,
-      14
-    ],
-    "767a4fee": [
-      10,
-      14
-    ],
-    "035073ad": [
-      10,
-      14
-    ],
-    "6d2adc83": [
-      10,
-      14
-    ],
-    "117391ae": [
-      10,
-      14
     ]
   }
 }

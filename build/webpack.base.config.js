@@ -25,24 +25,19 @@ module.exports = {
               loader: 'css-loader',
               options: {
                 minimize: production,
-                sourceMap: true,
-                importLoaders: 1
+                sourceMap: true
               }
             }, {
               loader: 'postcss-loader',
               options: {
                 ident: 'postcss',
-                sourceMap: true,
-                plugins: [
-                  require('autoprefixer')
-                ]
+                sourceMap: true
               }
             }, {
-              loader: 'resolve-url-loader?sourceMap'
+              loader: 'resolve-url-loader'
             }, {
               loader: 'sass-loader',
               options: {
-                precision: 8,
                 outputStyle: 'expanded',
                 sourceMap: true
               }
@@ -129,6 +124,7 @@ if (production) {
       parallel: true,
       sourceMap: true
     }),
+    new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
 }

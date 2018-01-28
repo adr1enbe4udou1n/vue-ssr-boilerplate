@@ -37,37 +37,37 @@
 </template>
 
 <script>
-  export default {
-    name: 'contact',
-    metaInfo: {
-      title: 'Contact',
-      meta: [
-        { name: 'description', content: 'Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.' }
-      ]
-    },
-    data () {
-      return {
-        form: {
-          email: '',
-          name: '',
-          food: null,
-          checked: false,
-          secret: 'S3CR3T'
+export default {
+  name: 'Contact',
+  metaInfo: {
+    title: 'Contact',
+    meta: [
+      { name: 'description', content: 'Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.' }
+    ]
+  },
+  data () {
+    return {
+      form: {
+        email: '',
+        name: '',
+        food: null,
+        checked: false,
+        secret: 'S3CR3T'
+      },
+      foods: [
+        {
+          text: 'Select One',
+          value: null
         },
-        foods: [
-          {
-            text: 'Select One',
-            value: null
-          },
-          'Carrots', 'Beans', 'Tomatoes', 'Corn'
-        ]
-      }
-    },
-    methods: {
-      onSubmit (evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
-      }
+        'Carrots', 'Beans', 'Tomatoes', 'Corn'
+      ]
+    }
+  },
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault()
+      alert(JSON.stringify(this.form))
     }
   }
+}
 </script>
