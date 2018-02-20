@@ -1,7 +1,7 @@
-import './sass/app.scss'
+import './scss/app.scss'
 import './load-client-scripts'
 
-import { createApp } from './app'
+import { createApp } from './main'
 
 const { app, router, store } = createApp()
 
