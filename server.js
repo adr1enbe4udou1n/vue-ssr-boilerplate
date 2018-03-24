@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const LRU = require('lru-cache')
 const path = require('path')
-const resolve = file => path.resolve(__dirname, file)
+const resolve = (file) => path.resolve(__dirname, file)
 
 const { createBundleRenderer } = require('vue-server-renderer')
 

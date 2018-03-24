@@ -11,10 +11,11 @@ const readFile = (fs, file) => {
 }
 
 module.exports = function setupDevServer (app, cb) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     let bundle, clientManifest
 
     // modify client config to work with hot middleware
+    clientConfig.mode = 'development'
     clientConfig.entry.app = ['webpack-hot-middleware/client', clientConfig.entry.app]
     clientConfig.output.filename = '[name].js'
     clientConfig.plugins.push(
@@ -31,10 +32,10 @@ module.exports = function setupDevServer (app, cb) {
 
     app.use(devMiddleware)
 
-    clientCompiler.plugin('done', stats => {
+    clientCompiler.plugin('done', (stats) => {
       stats = stats.toJson()
-      stats.errors.forEach(err => console.error(err))
-      stats.warnings.forEach(err => console.warn(err))
+      stats.errors.forEach((err) => console.error(err))
+      stats.warnings.forEach((err) => console.warn(err))
       if (stats.errors.length) return
 
       clientManifest = JSON.parse(readFile(
@@ -52,6 +53,7 @@ module.exports = function setupDevServer (app, cb) {
     app.use(require('webpack-hot-middleware')(clientCompiler, { heartbeat: 5000 }))
 
     // watch and update server renderer
+    serverConfig.mode = 'development'
     const serverCompiler = webpack(serverConfig)
     const mfs = new MFS()
     serverCompiler.outputFileSystem = mfs

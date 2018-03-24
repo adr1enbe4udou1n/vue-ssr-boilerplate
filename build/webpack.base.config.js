@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
@@ -87,7 +86,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: '[name].[contenthash].css',
       allChunks: true,
       disable: !production
     }),
@@ -103,23 +102,3 @@ module.exports = {
   },
   devtool: production ? 'source-map' : 'cheap-module-eval-source-map'
 }
-
-let plugins = []
-
-if (production) {
-  plugins = [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new UglifyJsPlugin({
-      parallel: true,
-      sourceMap: true
-    }),
-    new webpack.HashedModuleIdsPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin()
-  ]
-}
-
-module.exports.plugins.push(...plugins)
