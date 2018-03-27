@@ -1,8 +1,6 @@
 const path = require('path')
-const webpack = require('webpack')
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 
 const production = process.env.NODE_ENV === 'production'
@@ -17,32 +15,30 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: production,
-                sourceMap: true
-              }
-            }, {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                sourceMap: true
-              }
-            }, {
-              loader: 'resolve-url-loader'
-            }, {
-              loader: 'sass-loader',
-              options: {
-                outputStyle: 'expanded',
-                sourceMap: true
-              }
+        use: [
+          production ? MiniCssExtractPlugin.loader : 'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: production,
+              sourceMap: true
             }
-          ]
-        })
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              sourceMap: true
+            }
+          }, {
+            loader: 'resolve-url-loader'
+          }, {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.(js|vue)$/,
@@ -85,12 +81,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].[contenthash].css',
-      allChunks: true,
-      disable: !production
+    new MiniCssExtractPlugin({
+      filename: '[name].[chunkhash].css'
     }),
-    new FriendlyErrorsPlugin(),
     new WebpackNotifierPlugin()
   ],
   resolve: {
