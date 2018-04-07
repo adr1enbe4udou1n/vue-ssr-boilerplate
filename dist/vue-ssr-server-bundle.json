@@ -145,7 +145,7 @@
         "external_vue_router_default",
         "external_vue_meta_default",
         "external_vuex_default",
-        "main_createApp",
+        "createApp",
         "router",
         "linkActiveClass",
         "mode",

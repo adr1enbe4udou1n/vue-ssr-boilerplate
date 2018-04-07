@@ -1,6 +1,7 @@
 const path = require('path')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 
 const production = process.env.NODE_ENV === 'production'
@@ -84,6 +85,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash].css'
     }),
+    new FriendlyErrorsWebpackPlugin(),
     new WebpackNotifierPlugin()
   ],
   resolve: {

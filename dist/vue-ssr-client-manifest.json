@@ -11,15 +11,15 @@
     "fonts/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad",
     "fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
-    "vendors~app.4d63626340f4268fecd6.js",
+    "vendors~app.bac33e81fffa5207fb67.js",
     "app.37626435331d57d78190.css",
     "app.37626435331d57d78190.js",
-    "vendors~app.4d63626340f4268fecd6.js.map",
+    "vendors~app.bac33e81fffa5207fb67.js.map",
     "app.37626435331d57d78190.css.map",
     "app.37626435331d57d78190.js.map"
   ],
   "initial": [
-    "vendors~app.4d63626340f4268fecd6.js",
+    "vendors~app.bac33e81fffa5207fb67.js",
     "app.37626435331d57d78190.js"
   ],
   "async": [],
