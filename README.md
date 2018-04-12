@@ -1,6 +1,6 @@
 # Vue Boilerplate
 
-> Vue Bootstrap 4 (beta) boilerplate with basic home-about-contact pages vue components handled by vue router and with SSR feature.
+> Vue Bootstrap 4 boilerplate with basic home-about-contact pages vue components handled by vue router and with SSR feature.
 
 ## Quick start
 
