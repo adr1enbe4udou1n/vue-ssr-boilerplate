@@ -12,15 +12,15 @@
     "fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec",
     "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
     "vendors~app.d2b32dcce175ed24568c.js",
-    "app.2626ec44434ef640a68a.css",
-    "app.2626ec44434ef640a68a.js",
+    "app.4795873b1c9adfdc0c58.css",
+    "app.4795873b1c9adfdc0c58.js",
     "vendors~app.d2b32dcce175ed24568c.js.map",
-    "app.2626ec44434ef640a68a.css.map",
-    "app.2626ec44434ef640a68a.js.map"
+    "app.4795873b1c9adfdc0c58.css.map",
+    "app.4795873b1c9adfdc0c58.js.map"
   ],
   "initial": [
     "vendors~app.d2b32dcce175ed24568c.js",
-    "app.2626ec44434ef640a68a.js"
+    "app.4795873b1c9adfdc0c58.js"
   ],
   "async": [],
   "modules": {

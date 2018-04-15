@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
 
-import Home from '../views/Home'
-import About from '../views/About'
-import Contact from '../views/Contact'
+import Home from '@/views/Home'
+import About from '@/views/About'
+import Contact from '@/views/Contact'
 
 Vue.use(Router)
 Vue.use(Meta)
