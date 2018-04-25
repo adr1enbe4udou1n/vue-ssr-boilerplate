@@ -12,7 +12,7 @@ module.exports = merge(baseConfig, {
     libraryTarget: 'commonjs2'
   },
   externals: nodeExternals({
-    whitelist: /\.css$/
+    whitelist: [/\.css$/, /\?vue&type=style/]
   }),
   plugins: [
     new webpack.DefinePlugin({
