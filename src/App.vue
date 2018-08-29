@@ -2,24 +2,63 @@
   <div id="app">
     <div class="header">
       <b-container>
-        <b-nav class="nav-pills pull-right">
-          <b-nav-item to="/" exact>Home</b-nav-item>
-          <b-nav-item to="about">About</b-nav-item>
-          <b-nav-item to="contact">Contact</b-nav-item>
-        </b-nav>
-        <h3 class="text-muted">vue-boilerplate</h3>
+        <div class="d-flex justify-content-between">
+          <h3 class="text-muted">vue-ssr-boilerplate</h3>
+          <b-nav class="nav-pills float-right">
+            <b-nav-item to="/" exact>Home</b-nav-item>
+            <b-nav-item to="about">About</b-nav-item>
+            <b-nav-item to="contact">Contact</b-nav-item>
+          </b-nav>
+        </div>
       </b-container>
     </div>
 
     <div class="container">
-      <div class="slider" hidden>
-        <div><h3>1</h3></div>
-        <div><h3>2</h3></div>
-        <div><h3>3</h3></div>
-        <div><h3>4</h3></div>
-        <div><h3>5</h3></div>
-        <div><h3>6</h3></div>
-      </div>
+      <b-carousel id="carousel1"
+                  style="text-shadow: 1px 1px 2px #333;"
+                  controls
+                  indicators
+                  background="#ababab"
+                  :interval="4000"
+                  img-width="1024"
+                  img-height="480"
+                  v-model="slide"
+                  @sliding-start="onSlideStart"
+                  @sliding-end="onSlideEnd"
+                  v-if="$route.name === 'home'"
+      >
+        <!-- Text slides with image -->
+        <b-carousel-slide caption="First slide"
+                          text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+                          img-src="https://picsum.photos/1024/480/?image=52"
+        ></b-carousel-slide>
+
+        <!-- Slides with custom text -->
+        <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
+          <h1>Hello world!</h1>
+        </b-carousel-slide>
+
+        <!-- Slides with image only -->
+        <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">
+        </b-carousel-slide>
+
+        <!-- Slides with img slot -->
+        <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+        <b-carousel-slide>
+          <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
+               src="https://picsum.photos/1024/480/?image=55" alt="image slot"
+          >
+        </b-carousel-slide>
+
+        <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+        <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
+            ut lacus vel interdum.
+          </p>
+        </b-carousel-slide>
+      </b-carousel>
 
       <b-alert :variant="`${message.type}`" v-if="message">
         {{ message.body }}
@@ -29,7 +68,7 @@
 
     <div class="footer">
       <b-container>
-        <p><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by mycompany.com</p>
+        <p><font-awesome-icon icon="code"></font-awesome-icon> with <font-awesome-icon icon="heart"></font-awesome-icon> by mycompany.com</p>
       </b-container>
     </div>
   </div>
@@ -45,19 +84,20 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
     ]
   },
-  data: () => {
+  data () {
     return {
+      slide: 0,
+      sliding: null,
       message: null
     }
   },
-  mounted () {
-    $('.slider').not('.slick-initialized').removeAttr('hidden').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 1
-    })
+  methods: {
+    onSlideStart (slide) {
+      this.sliding = true
+    },
+    onSlideEnd (slide) {
+      this.sliding = false
+    }
   }
 }
 </script>

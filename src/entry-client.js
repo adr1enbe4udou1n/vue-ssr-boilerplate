@@ -1,5 +1,6 @@
-import './scss/app.scss'
-import './load-client-scripts'
+import './scss/main.scss'
+
+import 'babel-polyfill'
 
 import { createApp } from './main'
 
