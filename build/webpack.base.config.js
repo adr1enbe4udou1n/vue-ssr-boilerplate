@@ -7,6 +7,14 @@ const WebpackNotifierPlugin = require('webpack-notifier')
 
 const production = process.env.NODE_ENV === 'production'
 
+let postcssPlugins = [
+  require('autoprefixer')()
+]
+
+if (production) {
+  postcssPlugins.push(require('cssnano')())
+}
+
 let cssLoaders = [
   production ? MiniCssExtractPlugin.loader : 'vue-style-loader',
   {
@@ -21,9 +29,7 @@ let cssLoaders = [
     options: {
       ident: 'postcss',
       sourceMap: true,
-      plugins: [
-        require('autoprefixer')()
-      ]
+      plugins: postcssPlugins
     }
   }
 ]
