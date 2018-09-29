@@ -7,7 +7,7 @@ import fr from './fr'
 
 Vue.use(VueI18n)
 
-export function createI18n () {
+export function createI18n() {
   return new VueI18n({
     locale: process.env.APP_LOCALE || 'en',
     messages: {

@@ -2,39 +2,65 @@
   <div>
     <h1 class="mb-4">{{ $t('contact.title') }}</h1>
 
-    <b-form @submit="onSubmit" class="mb-4">
-      <b-form-group id="exampleInputGroup1"
-                    label="Email address:" label-for="exampleInput1"
-                    description="We'll never share your email with anyone else."
+    <b-form 
+      class="mb-4" 
+      @submit="onSubmit"
+    >
+      <b-form-group 
+        id="exampleInputGroup1"
+        label="Email address:" 
+        label-for="exampleInput1"
+        description="We'll never share your email with anyone else."
       >
-        <b-form-input id="exampleInput1"
-                      type="email" v-model="form.email" required
-                      placeholder="Enter email"
-        ></b-form-input>
+        <b-form-input 
+          id="exampleInput1"
+          v-model="form.email" 
+          type="email" 
+          required
+          placeholder="Enter email"
+        />
       </b-form-group>
-      <b-form-group id="exampleInputGroup2"
-                    label="Your Name:" label-for="exampleInput2"
+      <b-form-group 
+        id="exampleInputGroup2"
+        label="Your Name:" 
+        label-for="exampleInput2"
       >
-        <b-form-input id="exampleInput2"
-                      type="text" v-model="form.name" required
-                      placeholder="Enter name"
-        ></b-form-input>
+        <b-form-input 
+          id="exampleInput2"
+          v-model="form.name" 
+          type="text" 
+          required
+          placeholder="Enter name"
+        />
       </b-form-group>
-      <b-form-group id="exampleInputGroup3"
-                    label="Food:" label-for="exampleInput3"
+      <b-form-group 
+        id="exampleInputGroup3"
+        label="Food:" 
+        label-for="exampleInput3"
       >
-        <b-form-select id="exampleInput3"
-                       :options="foods" required
-                       v-model="form.food"
-        ></b-form-select>
+        <b-form-select 
+          id="exampleInput3"
+          v-model="form.food" 
+          :options="foods"
+          required
+        />
       </b-form-group>
       <b-form-group id="exampleGroup4">
-        <b-form-checkbox v-model="form.checked" id="exampleInput4">
+        <b-form-checkbox 
+          id="exampleInput4" 
+          v-model="form.checked"
+        >
           Check me out
         </b-form-checkbox>
       </b-form-group>
-      <b-btn type="submit" variant="primary">Submit</b-btn>
-      <b-btn type="reset" variant="secondary">Reset</b-btn>
+      <b-btn 
+        type="submit" 
+        variant="primary"
+      >Submit</b-btn>
+      <b-btn 
+        type="reset" 
+        variant="secondary"
+      >Reset</b-btn>
     </b-form>
   </div>
 </template>
@@ -45,10 +71,14 @@ export default {
   metaInfo: {
     title: 'Contact',
     meta: [
-      { name: 'description', content: 'Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.' }
+      {
+        name: 'description',
+        content:
+          'Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.'
+      }
     ]
   },
-  data () {
+  data() {
     return {
       form: {
         email: '',
@@ -62,12 +92,15 @@ export default {
           text: 'Select One',
           value: null
         },
-        'Carrots', 'Beans', 'Tomatoes', 'Corn'
+        'Carrots',
+        'Beans',
+        'Tomatoes',
+        'Corn'
       ]
     }
   },
   methods: {
-    onSubmit (evt) {
+    onSubmit(evt) {
       evt.preventDefault()
       alert(JSON.stringify(this.form))
     }
